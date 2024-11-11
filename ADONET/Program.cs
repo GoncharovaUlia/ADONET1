@@ -7,6 +7,6 @@ using (IDbConnection dbConnection = new System.Data.SQLite.SQLiteConnection("Dat
     dbConnection.Open();
     dbConnection.BeginTransaction(); //початок транзакцій
     var dbCommand = dbConnection.CreateCommand();
-    dbCommand.CommandText = "select * from Users";
+    dbCommand.CommandText = "select * from Waiter";
     dbConnection.Close ();
 }
