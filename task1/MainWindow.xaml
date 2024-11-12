@@ -7,7 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="761" Loaded="Window_Loaded">
     <Grid Margin="0,0,105,0">
-        <ListBox x:Name="List_Box" ItemsSource="{Binding users}" DisplayMemberPath="Name"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="True" Name="dg" Margin="0,0,-114,0" CellEditEnding="dg_CellEditEnding"/>
+        
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBox Name="NameforAdd" Width="100" Height="20"></TextBox>
+                <TextBox Name="Password"  Width="100" Height="20"></TextBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Add" Click="Add_Click" Height="20" Width="60"/>
+                <Button Content="Delete" Click="Button_Click" Height="20" Width="60"/>
+            </StackPanel>
+        </Grid>
 
     </Grid>
 </Window>

@@ -16,9 +16,9 @@ namespace task1
 
         public User(int id, string name, string password) 
         {
-            Id=id;
-            Name=name;
-            Password=password;
+            Id = id;
+            Name = name;
+            Password = password;
         }
     }
 }
